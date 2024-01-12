@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #fff; 
+    transition: background-color 0.5s, color 0.5s;
+}
+
+#heading {
+        font-size: 5rem;
+        margin: 25px auto;
+        text-align: center;
+}
+
+#toggleButton {
+    margin: 50px auto;
+    width: 110px;
+    height: 60px;
+    background-color: #222;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6px;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+}
+
+.transition-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.5s, background-color 0.5s;
+}
+
+.transition-circle {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: transform .5s, background-color .5s;
+    will-change: transform;
+}
+
+#toggleButton i{
+    color: #ffc107;
+}
+
+.dark-mode .container {
+    background-color: black; 
+    color: white; 
+}
+
+.dark-mode #toggleButton .transition-circle {
+    transform: translate(100%, -50%); 
+    background-color: white;
+}
+
+.dark-mode #toggleButton {
+    color: white; 
+}
+
+.dark-mode #toggleButton i {
+    color: #ffc107; 
+}
